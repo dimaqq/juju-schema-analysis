@@ -87,13 +87,12 @@ def main(data: list):
 
 if __name__ == "__main__":
     from pathlib import Path
-    for inp in Path(".").glob("juju/client/schemas-juju-*.json"):
+    for inp in Path(".").glob("schemas-juju-*.json"):
         schemata = json.loads(inp.read_text())
         inp.with_suffix(".txt").write_text("\n".join(main(schemata)))
 
 
 def test_main():
-    # Load schema (replace this with your schema source)
     schema_str = '''
     {
         "definitions": {
