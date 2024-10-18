@@ -57,9 +57,9 @@ def parse_definitions(defs: dict) -> dict[str, str]:
     return {n: "\n".join(linearise(v, defs)) for n, v in defs.items()}
 
 
-def main(data: list):
+def main(data: list, *, api_group: str):
     for facade in data:
-        if "model-user" not in facade["AvailableTo"]:
+        if api_group not in facade["AvailableTo"]:
             continue
 
         defs = facade["Schema"].get("definitions") or {}
@@ -89,7 +89,8 @@ if __name__ == "__main__":
     from pathlib import Path
     for inp in Path(".").glob("schemas-juju-*.json"):
         schemata = json.loads(inp.read_text())
-        inp.with_suffix(".txt").write_text("\n".join(main(schemata)))
+        inp.with_suffix(".model-user.txt").write_text("\n".join(main(schemata, api_group="model-user")))
+        inp.with_suffix(".controller-user.txt").write_text("\n".join(main(schemata, api_group="controller-user")))
 
 
 def test_main():

@@ -1,0 +1,2169 @@
+Admin: 3
+.Login()
+in: LoginRequest
+.auth-tag: str
+.bakery-version: int
+.cli-args: str
+.client-version: str
+.credentials: str
+.macaroons[0][0]: Macaroon
+.macaroons[0][0]: dict[Any, Any]
+.nonce: str
+.user-data: str
+out: LoginResult
+.bakery-discharge-required: Macaroon
+.bakery-discharge-required: dict[Any, Any]
+.controller-tag: str
+.discharge-required: Macaroon
+.discharge-required: dict[Any, Any]
+.discharge-required-error: str
+.facades[0]: FacadeVersions
+.facades[0].name: str
+.facades[0].versions[0]: int
+.model-tag: str
+.public-dns-name: str
+.server-version: str
+.servers[0][0]: HostPort
+.servers[0][0].Address: Address
+.servers[0][0].Address.cidr: str
+.servers[0][0].Address.config-type: str
+.servers[0][0].Address.is-secondary: bool
+.servers[0][0].Address.scope: str
+.servers[0][0].Address.space-id: str
+.servers[0][0].Address.space-name: str
+.servers[0][0].Address.type: str
+.servers[0][0].Address.value: str
+.servers[0][0].cidr: str
+.servers[0][0].config-type: str
+.servers[0][0].is-secondary: bool
+.servers[0][0].port: int
+.servers[0][0].scope: str
+.servers[0][0].space-id: str
+.servers[0][0].space-name: str
+.servers[0][0].type: str
+.servers[0][0].value: str
+.user-info: AuthUserInfo
+.user-info.controller-access: str
+.user-info.credentials: str
+.user-info.display-name: str
+.user-info.identity: str
+.user-info.last-connection: str
+.user-info.model-access: str
+
+Admin: 3
+.RedirectInfo()
+in: None
+out: RedirectInfoResult
+.ca-cert: str
+.servers[0][0]: HostPort
+.servers[0][0].Address: Address
+.servers[0][0].Address.cidr: str
+.servers[0][0].Address.config-type: str
+.servers[0][0].Address.is-secondary: bool
+.servers[0][0].Address.scope: str
+.servers[0][0].Address.space-id: str
+.servers[0][0].Address.space-name: str
+.servers[0][0].Address.type: str
+.servers[0][0].Address.value: str
+.servers[0][0].cidr: str
+.servers[0][0].config-type: str
+.servers[0][0].is-secondary: bool
+.servers[0][0].port: int
+.servers[0][0].scope: str
+.servers[0][0].space-id: str
+.servers[0][0].space-name: str
+.servers[0][0].type: str
+.servers[0][0].value: str
+
+AllModelWatcher: 4
+.Next()
+in: None
+out: AllWatcherNextResults
+.deltas[0]: Delta
+.deltas[0].entity: dict[Any, Any]
+.deltas[0].removed: bool
+
+AllModelWatcher: 4
+.Stop()
+in: None
+out: None
+
+ApplicationOffers: 4
+.ApplicationOffers()
+in: OfferURLs
+.bakery-version: int
+.offer-urls[0]: str
+out: ApplicationOffersResults
+.results[0]: ApplicationOfferResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: ApplicationOfferAdminDetails
+.results[0].result.ApplicationOfferDetails: ApplicationOfferDetails
+.results[0].result.ApplicationOfferDetails.application-description: str
+.results[0].result.ApplicationOfferDetails.bindings["abc"]: str
+.results[0].result.ApplicationOfferDetails.endpoints[0]: RemoteEndpoint
+.results[0].result.ApplicationOfferDetails.endpoints[0].interface: str
+.results[0].result.ApplicationOfferDetails.endpoints[0].limit: int
+.results[0].result.ApplicationOfferDetails.endpoints[0].name: str
+.results[0].result.ApplicationOfferDetails.endpoints[0].role: str
+.results[0].result.ApplicationOfferDetails.offer-name: str
+.results[0].result.ApplicationOfferDetails.offer-url: str
+.results[0].result.ApplicationOfferDetails.offer-uuid: str
+.results[0].result.ApplicationOfferDetails.source-model-tag: str
+.results[0].result.ApplicationOfferDetails.spaces[0]: RemoteSpace
+.results[0].result.ApplicationOfferDetails.spaces[0].cloud-type: str
+.results[0].result.ApplicationOfferDetails.spaces[0].name: str
+.results[0].result.ApplicationOfferDetails.spaces[0].provider-attributes["abc"]: dict[Any, Any]
+.results[0].result.ApplicationOfferDetails.spaces[0].provider-id: str
+.results[0].result.ApplicationOfferDetails.spaces[0].subnets[0]: Subnet
+.results[0].result.ApplicationOfferDetails.spaces[0].subnets[0].cidr: str
+.results[0].result.ApplicationOfferDetails.spaces[0].subnets[0].life: str
+.results[0].result.ApplicationOfferDetails.spaces[0].subnets[0].provider-id: str
+.results[0].result.ApplicationOfferDetails.spaces[0].subnets[0].provider-network-id: str
+.results[0].result.ApplicationOfferDetails.spaces[0].subnets[0].provider-space-id: str
+.results[0].result.ApplicationOfferDetails.spaces[0].subnets[0].space-tag: str
+.results[0].result.ApplicationOfferDetails.spaces[0].subnets[0].status: str
+.results[0].result.ApplicationOfferDetails.spaces[0].subnets[0].vlan-tag: int
+.results[0].result.ApplicationOfferDetails.spaces[0].subnets[0].zones[0]: str
+.results[0].result.ApplicationOfferDetails.users[0]: OfferUserDetails
+.results[0].result.ApplicationOfferDetails.users[0].access: str
+.results[0].result.ApplicationOfferDetails.users[0].display-name: str
+.results[0].result.ApplicationOfferDetails.users[0].user: str
+.results[0].result.application-description: str
+.results[0].result.application-name: str
+.results[0].result.bindings["abc"]: str
+.results[0].result.charm-url: str
+.results[0].result.connections[0]: OfferConnection
+.results[0].result.connections[0].endpoint: str
+.results[0].result.connections[0].ingress-subnets[0]: str
+.results[0].result.connections[0].relation-id: int
+.results[0].result.connections[0].source-model-tag: str
+.results[0].result.connections[0].status: EntityStatus
+.results[0].result.connections[0].status.data["abc"]: dict[Any, Any]
+.results[0].result.connections[0].status.info: str
+.results[0].result.connections[0].status.since: str
+.results[0].result.connections[0].status.status: str
+.results[0].result.connections[0].username: str
+.results[0].result.endpoints[0]: RemoteEndpoint
+.results[0].result.endpoints[0].interface: str
+.results[0].result.endpoints[0].limit: int
+.results[0].result.endpoints[0].name: str
+.results[0].result.endpoints[0].role: str
+.results[0].result.offer-name: str
+.results[0].result.offer-url: str
+.results[0].result.offer-uuid: str
+.results[0].result.source-model-tag: str
+.results[0].result.spaces[0]: RemoteSpace
+.results[0].result.spaces[0].cloud-type: str
+.results[0].result.spaces[0].name: str
+.results[0].result.spaces[0].provider-attributes["abc"]: dict[Any, Any]
+.results[0].result.spaces[0].provider-id: str
+.results[0].result.spaces[0].subnets[0]: Subnet
+.results[0].result.spaces[0].subnets[0].cidr: str
+.results[0].result.spaces[0].subnets[0].life: str
+.results[0].result.spaces[0].subnets[0].provider-id: str
+.results[0].result.spaces[0].subnets[0].provider-network-id: str
+.results[0].result.spaces[0].subnets[0].provider-space-id: str
+.results[0].result.spaces[0].subnets[0].space-tag: str
+.results[0].result.spaces[0].subnets[0].status: str
+.results[0].result.spaces[0].subnets[0].vlan-tag: int
+.results[0].result.spaces[0].subnets[0].zones[0]: str
+.results[0].result.users[0]: OfferUserDetails
+.results[0].result.users[0].access: str
+.results[0].result.users[0].display-name: str
+.results[0].result.users[0].user: str
+
+ApplicationOffers: 4
+.DestroyOffers()
+in: DestroyApplicationOffers
+.force: bool
+.offer-urls[0]: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+ApplicationOffers: 4
+.FindApplicationOffers()
+in: OfferFilters
+.Filters[0]: OfferFilter
+.Filters[0].allowed-users[0]: str
+.Filters[0].application-description: str
+.Filters[0].application-name: str
+.Filters[0].application-user: str
+.Filters[0].connected-users[0]: str
+.Filters[0].endpoints[0]: EndpointFilterAttributes
+.Filters[0].endpoints[0].interface: str
+.Filters[0].endpoints[0].name: str
+.Filters[0].endpoints[0].role: str
+.Filters[0].model-name: str
+.Filters[0].offer-name: str
+.Filters[0].owner-name: str
+out: QueryApplicationOffersResults
+.results[0]: ApplicationOfferAdminDetails
+.results[0].ApplicationOfferDetails: ApplicationOfferDetails
+.results[0].ApplicationOfferDetails.application-description: str
+.results[0].ApplicationOfferDetails.bindings["abc"]: str
+.results[0].ApplicationOfferDetails.endpoints[0]: RemoteEndpoint
+.results[0].ApplicationOfferDetails.endpoints[0].interface: str
+.results[0].ApplicationOfferDetails.endpoints[0].limit: int
+.results[0].ApplicationOfferDetails.endpoints[0].name: str
+.results[0].ApplicationOfferDetails.endpoints[0].role: str
+.results[0].ApplicationOfferDetails.offer-name: str
+.results[0].ApplicationOfferDetails.offer-url: str
+.results[0].ApplicationOfferDetails.offer-uuid: str
+.results[0].ApplicationOfferDetails.source-model-tag: str
+.results[0].ApplicationOfferDetails.spaces[0]: RemoteSpace
+.results[0].ApplicationOfferDetails.spaces[0].cloud-type: str
+.results[0].ApplicationOfferDetails.spaces[0].name: str
+.results[0].ApplicationOfferDetails.spaces[0].provider-attributes["abc"]: dict[Any, Any]
+.results[0].ApplicationOfferDetails.spaces[0].provider-id: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0]: Subnet
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].cidr: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].life: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].provider-id: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].provider-network-id: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].provider-space-id: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].space-tag: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].status: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].vlan-tag: int
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].zones[0]: str
+.results[0].ApplicationOfferDetails.users[0]: OfferUserDetails
+.results[0].ApplicationOfferDetails.users[0].access: str
+.results[0].ApplicationOfferDetails.users[0].display-name: str
+.results[0].ApplicationOfferDetails.users[0].user: str
+.results[0].application-description: str
+.results[0].application-name: str
+.results[0].bindings["abc"]: str
+.results[0].charm-url: str
+.results[0].connections[0]: OfferConnection
+.results[0].connections[0].endpoint: str
+.results[0].connections[0].ingress-subnets[0]: str
+.results[0].connections[0].relation-id: int
+.results[0].connections[0].source-model-tag: str
+.results[0].connections[0].status: EntityStatus
+.results[0].connections[0].status.data["abc"]: dict[Any, Any]
+.results[0].connections[0].status.info: str
+.results[0].connections[0].status.since: str
+.results[0].connections[0].status.status: str
+.results[0].connections[0].username: str
+.results[0].endpoints[0]: RemoteEndpoint
+.results[0].endpoints[0].interface: str
+.results[0].endpoints[0].limit: int
+.results[0].endpoints[0].name: str
+.results[0].endpoints[0].role: str
+.results[0].offer-name: str
+.results[0].offer-url: str
+.results[0].offer-uuid: str
+.results[0].source-model-tag: str
+.results[0].spaces[0]: RemoteSpace
+.results[0].spaces[0].cloud-type: str
+.results[0].spaces[0].name: str
+.results[0].spaces[0].provider-attributes["abc"]: dict[Any, Any]
+.results[0].spaces[0].provider-id: str
+.results[0].spaces[0].subnets[0]: Subnet
+.results[0].spaces[0].subnets[0].cidr: str
+.results[0].spaces[0].subnets[0].life: str
+.results[0].spaces[0].subnets[0].provider-id: str
+.results[0].spaces[0].subnets[0].provider-network-id: str
+.results[0].spaces[0].subnets[0].provider-space-id: str
+.results[0].spaces[0].subnets[0].space-tag: str
+.results[0].spaces[0].subnets[0].status: str
+.results[0].spaces[0].subnets[0].vlan-tag: int
+.results[0].spaces[0].subnets[0].zones[0]: str
+.results[0].users[0]: OfferUserDetails
+.results[0].users[0].access: str
+.results[0].users[0].display-name: str
+.results[0].users[0].user: str
+
+ApplicationOffers: 4
+.GetConsumeDetails()
+in: ConsumeOfferDetailsArg
+.offer-urls: OfferURLs
+.offer-urls.bakery-version: int
+.offer-urls.offer-urls[0]: str
+.user-tag: str
+out: ConsumeOfferDetailsResults
+.results[0]: ConsumeOfferDetailsResult
+.results[0].ConsumeOfferDetails: ConsumeOfferDetails
+.results[0].ConsumeOfferDetails.external-controller: ExternalControllerInfo
+.results[0].ConsumeOfferDetails.external-controller.addrs[0]: str
+.results[0].ConsumeOfferDetails.external-controller.ca-cert: str
+.results[0].ConsumeOfferDetails.external-controller.controller-alias: str
+.results[0].ConsumeOfferDetails.external-controller.controller-tag: str
+.results[0].ConsumeOfferDetails.macaroon: Macaroon
+.results[0].ConsumeOfferDetails.macaroon: dict[Any, Any]
+.results[0].ConsumeOfferDetails.offer: ApplicationOfferDetails
+.results[0].ConsumeOfferDetails.offer.application-description: str
+.results[0].ConsumeOfferDetails.offer.bindings["abc"]: str
+.results[0].ConsumeOfferDetails.offer.endpoints[0]: RemoteEndpoint
+.results[0].ConsumeOfferDetails.offer.endpoints[0].interface: str
+.results[0].ConsumeOfferDetails.offer.endpoints[0].limit: int
+.results[0].ConsumeOfferDetails.offer.endpoints[0].name: str
+.results[0].ConsumeOfferDetails.offer.endpoints[0].role: str
+.results[0].ConsumeOfferDetails.offer.offer-name: str
+.results[0].ConsumeOfferDetails.offer.offer-url: str
+.results[0].ConsumeOfferDetails.offer.offer-uuid: str
+.results[0].ConsumeOfferDetails.offer.source-model-tag: str
+.results[0].ConsumeOfferDetails.offer.spaces[0]: RemoteSpace
+.results[0].ConsumeOfferDetails.offer.spaces[0].cloud-type: str
+.results[0].ConsumeOfferDetails.offer.spaces[0].name: str
+.results[0].ConsumeOfferDetails.offer.spaces[0].provider-attributes["abc"]: dict[Any, Any]
+.results[0].ConsumeOfferDetails.offer.spaces[0].provider-id: str
+.results[0].ConsumeOfferDetails.offer.spaces[0].subnets[0]: Subnet
+.results[0].ConsumeOfferDetails.offer.spaces[0].subnets[0].cidr: str
+.results[0].ConsumeOfferDetails.offer.spaces[0].subnets[0].life: str
+.results[0].ConsumeOfferDetails.offer.spaces[0].subnets[0].provider-id: str
+.results[0].ConsumeOfferDetails.offer.spaces[0].subnets[0].provider-network-id: str
+.results[0].ConsumeOfferDetails.offer.spaces[0].subnets[0].provider-space-id: str
+.results[0].ConsumeOfferDetails.offer.spaces[0].subnets[0].space-tag: str
+.results[0].ConsumeOfferDetails.offer.spaces[0].subnets[0].status: str
+.results[0].ConsumeOfferDetails.offer.spaces[0].subnets[0].vlan-tag: int
+.results[0].ConsumeOfferDetails.offer.spaces[0].subnets[0].zones[0]: str
+.results[0].ConsumeOfferDetails.offer.users[0]: OfferUserDetails
+.results[0].ConsumeOfferDetails.offer.users[0].access: str
+.results[0].ConsumeOfferDetails.offer.users[0].display-name: str
+.results[0].ConsumeOfferDetails.offer.users[0].user: str
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].external-controller: ExternalControllerInfo
+.results[0].external-controller.addrs[0]: str
+.results[0].external-controller.ca-cert: str
+.results[0].external-controller.controller-alias: str
+.results[0].external-controller.controller-tag: str
+.results[0].macaroon: Macaroon
+.results[0].macaroon: dict[Any, Any]
+.results[0].offer: ApplicationOfferDetails
+.results[0].offer.application-description: str
+.results[0].offer.bindings["abc"]: str
+.results[0].offer.endpoints[0]: RemoteEndpoint
+.results[0].offer.endpoints[0].interface: str
+.results[0].offer.endpoints[0].limit: int
+.results[0].offer.endpoints[0].name: str
+.results[0].offer.endpoints[0].role: str
+.results[0].offer.offer-name: str
+.results[0].offer.offer-url: str
+.results[0].offer.offer-uuid: str
+.results[0].offer.source-model-tag: str
+.results[0].offer.spaces[0]: RemoteSpace
+.results[0].offer.spaces[0].cloud-type: str
+.results[0].offer.spaces[0].name: str
+.results[0].offer.spaces[0].provider-attributes["abc"]: dict[Any, Any]
+.results[0].offer.spaces[0].provider-id: str
+.results[0].offer.spaces[0].subnets[0]: Subnet
+.results[0].offer.spaces[0].subnets[0].cidr: str
+.results[0].offer.spaces[0].subnets[0].life: str
+.results[0].offer.spaces[0].subnets[0].provider-id: str
+.results[0].offer.spaces[0].subnets[0].provider-network-id: str
+.results[0].offer.spaces[0].subnets[0].provider-space-id: str
+.results[0].offer.spaces[0].subnets[0].space-tag: str
+.results[0].offer.spaces[0].subnets[0].status: str
+.results[0].offer.spaces[0].subnets[0].vlan-tag: int
+.results[0].offer.spaces[0].subnets[0].zones[0]: str
+.results[0].offer.users[0]: OfferUserDetails
+.results[0].offer.users[0].access: str
+.results[0].offer.users[0].display-name: str
+.results[0].offer.users[0].user: str
+
+ApplicationOffers: 4
+.ListApplicationOffers()
+in: OfferFilters
+.Filters[0]: OfferFilter
+.Filters[0].allowed-users[0]: str
+.Filters[0].application-description: str
+.Filters[0].application-name: str
+.Filters[0].application-user: str
+.Filters[0].connected-users[0]: str
+.Filters[0].endpoints[0]: EndpointFilterAttributes
+.Filters[0].endpoints[0].interface: str
+.Filters[0].endpoints[0].name: str
+.Filters[0].endpoints[0].role: str
+.Filters[0].model-name: str
+.Filters[0].offer-name: str
+.Filters[0].owner-name: str
+out: QueryApplicationOffersResults
+.results[0]: ApplicationOfferAdminDetails
+.results[0].ApplicationOfferDetails: ApplicationOfferDetails
+.results[0].ApplicationOfferDetails.application-description: str
+.results[0].ApplicationOfferDetails.bindings["abc"]: str
+.results[0].ApplicationOfferDetails.endpoints[0]: RemoteEndpoint
+.results[0].ApplicationOfferDetails.endpoints[0].interface: str
+.results[0].ApplicationOfferDetails.endpoints[0].limit: int
+.results[0].ApplicationOfferDetails.endpoints[0].name: str
+.results[0].ApplicationOfferDetails.endpoints[0].role: str
+.results[0].ApplicationOfferDetails.offer-name: str
+.results[0].ApplicationOfferDetails.offer-url: str
+.results[0].ApplicationOfferDetails.offer-uuid: str
+.results[0].ApplicationOfferDetails.source-model-tag: str
+.results[0].ApplicationOfferDetails.spaces[0]: RemoteSpace
+.results[0].ApplicationOfferDetails.spaces[0].cloud-type: str
+.results[0].ApplicationOfferDetails.spaces[0].name: str
+.results[0].ApplicationOfferDetails.spaces[0].provider-attributes["abc"]: dict[Any, Any]
+.results[0].ApplicationOfferDetails.spaces[0].provider-id: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0]: Subnet
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].cidr: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].life: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].provider-id: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].provider-network-id: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].provider-space-id: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].space-tag: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].status: str
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].vlan-tag: int
+.results[0].ApplicationOfferDetails.spaces[0].subnets[0].zones[0]: str
+.results[0].ApplicationOfferDetails.users[0]: OfferUserDetails
+.results[0].ApplicationOfferDetails.users[0].access: str
+.results[0].ApplicationOfferDetails.users[0].display-name: str
+.results[0].ApplicationOfferDetails.users[0].user: str
+.results[0].application-description: str
+.results[0].application-name: str
+.results[0].bindings["abc"]: str
+.results[0].charm-url: str
+.results[0].connections[0]: OfferConnection
+.results[0].connections[0].endpoint: str
+.results[0].connections[0].ingress-subnets[0]: str
+.results[0].connections[0].relation-id: int
+.results[0].connections[0].source-model-tag: str
+.results[0].connections[0].status: EntityStatus
+.results[0].connections[0].status.data["abc"]: dict[Any, Any]
+.results[0].connections[0].status.info: str
+.results[0].connections[0].status.since: str
+.results[0].connections[0].status.status: str
+.results[0].connections[0].username: str
+.results[0].endpoints[0]: RemoteEndpoint
+.results[0].endpoints[0].interface: str
+.results[0].endpoints[0].limit: int
+.results[0].endpoints[0].name: str
+.results[0].endpoints[0].role: str
+.results[0].offer-name: str
+.results[0].offer-url: str
+.results[0].offer-uuid: str
+.results[0].source-model-tag: str
+.results[0].spaces[0]: RemoteSpace
+.results[0].spaces[0].cloud-type: str
+.results[0].spaces[0].name: str
+.results[0].spaces[0].provider-attributes["abc"]: dict[Any, Any]
+.results[0].spaces[0].provider-id: str
+.results[0].spaces[0].subnets[0]: Subnet
+.results[0].spaces[0].subnets[0].cidr: str
+.results[0].spaces[0].subnets[0].life: str
+.results[0].spaces[0].subnets[0].provider-id: str
+.results[0].spaces[0].subnets[0].provider-network-id: str
+.results[0].spaces[0].subnets[0].provider-space-id: str
+.results[0].spaces[0].subnets[0].space-tag: str
+.results[0].spaces[0].subnets[0].status: str
+.results[0].spaces[0].subnets[0].vlan-tag: int
+.results[0].spaces[0].subnets[0].zones[0]: str
+.results[0].users[0]: OfferUserDetails
+.results[0].users[0].access: str
+.results[0].users[0].display-name: str
+.results[0].users[0].user: str
+
+ApplicationOffers: 4
+.ModifyOfferAccess()
+in: ModifyOfferAccessRequest
+.changes[0]: ModifyOfferAccess
+.changes[0].access: str
+.changes[0].action: str
+.changes[0].offer-url: str
+.changes[0].user-tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+ApplicationOffers: 4
+.Offer()
+in: AddApplicationOffers
+.Offers[0]: AddApplicationOffer
+.Offers[0].application-description: str
+.Offers[0].application-name: str
+.Offers[0].endpoints["abc"]: str
+.Offers[0].model-tag: str
+.Offers[0].offer-name: str
+.Offers[0].owner-tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+ApplicationOffers: 4
+.RemoteApplicationInfo()
+in: OfferURLs
+.bakery-version: int
+.offer-urls[0]: str
+out: RemoteApplicationInfoResults
+.results[0]: RemoteApplicationInfoResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: RemoteApplicationInfo
+.results[0].result.description: str
+.results[0].result.endpoints[0]: RemoteEndpoint
+.results[0].result.endpoints[0].interface: str
+.results[0].result.endpoints[0].limit: int
+.results[0].result.endpoints[0].name: str
+.results[0].result.endpoints[0].role: str
+.results[0].result.icon-url-path: str
+.results[0].result.model-tag: str
+.results[0].result.name: str
+.results[0].result.offer-url: str
+.results[0].result.source-model-label: str
+
+Bundle: 6
+.ExportBundle()
+in: ExportBundleParams
+.include-charm-defaults: bool
+out: StringResult
+.error: Error
+.error.code: str
+.error.info["abc"]: dict[Any, Any]
+.error.message: str
+.result: str
+
+Bundle: 6
+.GetChanges()
+in: BundleChangesParams
+.bundleURL: str
+.yaml: str
+out: BundleChangesResults
+.changes[0]: BundleChange
+.changes[0].args[0]: dict[Any, Any]
+.changes[0].id: str
+.changes[0].method: str
+.changes[0].requires[0]: str
+.errors[0]: str
+
+Bundle: 6
+.GetChangesMapArgs()
+in: BundleChangesParams
+.bundleURL: str
+.yaml: str
+out: BundleChangesMapArgsResults
+.changes[0]: BundleChangesMapArgs
+.changes[0].args["abc"]: dict[Any, Any]
+.changes[0].id: str
+.changes[0].method: str
+.changes[0].requires[0]: str
+.errors[0]: str
+
+Cloud: 7
+.AddCloud()
+in: AddCloudArgs
+.cloud: Cloud
+.cloud.auth-types[0]: str
+.cloud.ca-certificates[0]: str
+.cloud.config["abc"]: dict[Any, Any]
+.cloud.endpoint: str
+.cloud.host-cloud-region: str
+.cloud.identity-endpoint: str
+.cloud.is-controller-cloud: bool
+.cloud.region-config["abc"]["abc"]: dict[Any, Any]
+.cloud.regions[0]: CloudRegion
+.cloud.regions[0].endpoint: str
+.cloud.regions[0].identity-endpoint: str
+.cloud.regions[0].name: str
+.cloud.regions[0].storage-endpoint: str
+.cloud.skip-tls-verify: bool
+.cloud.storage-endpoint: str
+.cloud.type: str
+.force: bool
+.name: str
+out: None
+
+Cloud: 7
+.AddCredentials()
+in: TaggedCredentials
+.credentials[0]: TaggedCredential
+.credentials[0].credential: CloudCredential
+.credentials[0].credential.attrs["abc"]: str
+.credentials[0].credential.auth-type: str
+.credentials[0].credential.redacted[0]: str
+.credentials[0].tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+Cloud: 7
+.CheckCredentialsModels()
+in: TaggedCredentials
+.credentials[0]: TaggedCredential
+.credentials[0].credential: CloudCredential
+.credentials[0].credential.attrs["abc"]: str
+.credentials[0].credential.auth-type: str
+.credentials[0].credential.redacted[0]: str
+.credentials[0].tag: str
+out: UpdateCredentialResults
+.results[0]: UpdateCredentialResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].models[0]: UpdateCredentialModelResult
+.results[0].models[0].errors[0]: ErrorResult
+.results[0].models[0].errors[0].error: Error
+.results[0].models[0].errors[0].error.code: str
+.results[0].models[0].errors[0].error.info["abc"]: dict[Any, Any]
+.results[0].models[0].errors[0].error.message: str
+.results[0].models[0].name: str
+.results[0].models[0].uuid: str
+.results[0].tag: str
+
+Cloud: 7
+.Cloud()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: CloudResults
+.results[0]: CloudResult
+.results[0].cloud: Cloud
+.results[0].cloud.auth-types[0]: str
+.results[0].cloud.ca-certificates[0]: str
+.results[0].cloud.config["abc"]: dict[Any, Any]
+.results[0].cloud.endpoint: str
+.results[0].cloud.host-cloud-region: str
+.results[0].cloud.identity-endpoint: str
+.results[0].cloud.is-controller-cloud: bool
+.results[0].cloud.region-config["abc"]["abc"]: dict[Any, Any]
+.results[0].cloud.regions[0]: CloudRegion
+.results[0].cloud.regions[0].endpoint: str
+.results[0].cloud.regions[0].identity-endpoint: str
+.results[0].cloud.regions[0].name: str
+.results[0].cloud.regions[0].storage-endpoint: str
+.results[0].cloud.skip-tls-verify: bool
+.results[0].cloud.storage-endpoint: str
+.results[0].cloud.type: str
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+Cloud: 7
+.CloudInfo()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: CloudInfoResults
+.results[0]: CloudInfoResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: CloudInfo
+.results[0].result.CloudDetails: CloudDetails
+.results[0].result.CloudDetails.auth-types[0]: str
+.results[0].result.CloudDetails.endpoint: str
+.results[0].result.CloudDetails.identity-endpoint: str
+.results[0].result.CloudDetails.regions[0]: CloudRegion
+.results[0].result.CloudDetails.regions[0].endpoint: str
+.results[0].result.CloudDetails.regions[0].identity-endpoint: str
+.results[0].result.CloudDetails.regions[0].name: str
+.results[0].result.CloudDetails.regions[0].storage-endpoint: str
+.results[0].result.CloudDetails.storage-endpoint: str
+.results[0].result.CloudDetails.type: str
+.results[0].result.users[0]: CloudUserInfo
+.results[0].result.users[0].access: str
+.results[0].result.users[0].display-name: str
+.results[0].result.users[0].user: str
+
+Cloud: 7
+.Clouds()
+in: None
+out: CloudsResult
+.clouds["abc"]: Cloud
+.clouds["abc"].auth-types[0]: str
+.clouds["abc"].ca-certificates[0]: str
+.clouds["abc"].config["abc"]: dict[Any, Any]
+.clouds["abc"].endpoint: str
+.clouds["abc"].host-cloud-region: str
+.clouds["abc"].identity-endpoint: str
+.clouds["abc"].is-controller-cloud: bool
+.clouds["abc"].region-config["abc"]["abc"]: dict[Any, Any]
+.clouds["abc"].regions[0]: CloudRegion
+.clouds["abc"].regions[0].endpoint: str
+.clouds["abc"].regions[0].identity-endpoint: str
+.clouds["abc"].regions[0].name: str
+.clouds["abc"].regions[0].storage-endpoint: str
+.clouds["abc"].skip-tls-verify: bool
+.clouds["abc"].storage-endpoint: str
+.clouds["abc"].type: str
+
+Cloud: 7
+.Credential()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: CloudCredentialResults
+.results[0]: CloudCredentialResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: CloudCredential
+.results[0].result.attrs["abc"]: str
+.results[0].result.auth-type: str
+.results[0].result.redacted[0]: str
+
+Cloud: 7
+.CredentialContents()
+in: CloudCredentialArgs
+.credentials[0]: CloudCredentialArg
+.credentials[0].cloud-name: str
+.credentials[0].credential-name: str
+.include-secrets: bool
+out: CredentialContentResults
+.results[0]: CredentialContentResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: ControllerCredentialInfo
+.results[0].result.content: CredentialContent
+.results[0].result.content.attrs["abc"]: str
+.results[0].result.content.auth-type: str
+.results[0].result.content.cloud: str
+.results[0].result.content.name: str
+.results[0].result.content.valid: bool
+.results[0].result.models[0]: ModelAccess
+.results[0].result.models[0].access: str
+.results[0].result.models[0].model: str
+
+Cloud: 7
+.InstanceTypes()
+in: CloudInstanceTypesConstraints
+.constraints[0]: CloudInstanceTypesConstraint
+.constraints[0].cloud-tag: str
+.constraints[0].constraints: Value
+.constraints[0].constraints.allocate-public-ip: bool
+.constraints[0].constraints.arch: str
+.constraints[0].constraints.container: str
+.constraints[0].constraints.cores: int
+.constraints[0].constraints.cpu-power: int
+.constraints[0].constraints.instance-role: str
+.constraints[0].constraints.instance-type: str
+.constraints[0].constraints.mem: int
+.constraints[0].constraints.root-disk: int
+.constraints[0].constraints.root-disk-source: str
+.constraints[0].constraints.spaces[0]: str
+.constraints[0].constraints.tags[0]: str
+.constraints[0].constraints.virt-type: str
+.constraints[0].constraints.zones[0]: str
+.constraints[0].region: str
+out: InstanceTypesResults
+.results[0]: InstanceTypesResult
+.results[0].cost-currency: str
+.results[0].cost-divisor: int
+.results[0].cost-unit: str
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].instance-types[0]: InstanceType
+.results[0].instance-types[0].arches[0]: str
+.results[0].instance-types[0].cost: int
+.results[0].instance-types[0].cpu-cores: int
+.results[0].instance-types[0].deprecated: bool
+.results[0].instance-types[0].memory: int
+.results[0].instance-types[0].name: str
+.results[0].instance-types[0].root-disk: int
+.results[0].instance-types[0].virt-type: str
+
+Cloud: 7
+.ListCloudInfo()
+in: ListCloudsRequest
+.all: bool
+.user-tag: str
+out: ListCloudInfoResults
+.results[0]: ListCloudInfoResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: ListCloudInfo
+.results[0].result.CloudDetails: CloudDetails
+.results[0].result.CloudDetails.auth-types[0]: str
+.results[0].result.CloudDetails.endpoint: str
+.results[0].result.CloudDetails.identity-endpoint: str
+.results[0].result.CloudDetails.regions[0]: CloudRegion
+.results[0].result.CloudDetails.regions[0].endpoint: str
+.results[0].result.CloudDetails.regions[0].identity-endpoint: str
+.results[0].result.CloudDetails.regions[0].name: str
+.results[0].result.CloudDetails.regions[0].storage-endpoint: str
+.results[0].result.CloudDetails.storage-endpoint: str
+.results[0].result.CloudDetails.type: str
+.results[0].result.user-access: str
+
+Cloud: 7
+.ModifyCloudAccess()
+in: ModifyCloudAccessRequest
+.changes[0]: ModifyCloudAccess
+.changes[0].access: str
+.changes[0].action: str
+.changes[0].cloud-tag: str
+.changes[0].user-tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+Cloud: 7
+.RemoveClouds()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+Cloud: 7
+.RevokeCredentialsCheckModels()
+in: RevokeCredentialArgs
+.credentials[0]: RevokeCredentialArg
+.credentials[0].force: bool
+.credentials[0].tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+Cloud: 7
+.UpdateCloud()
+in: UpdateCloudArgs
+.clouds[0]: AddCloudArgs
+.clouds[0].cloud: Cloud
+.clouds[0].cloud.auth-types[0]: str
+.clouds[0].cloud.ca-certificates[0]: str
+.clouds[0].cloud.config["abc"]: dict[Any, Any]
+.clouds[0].cloud.endpoint: str
+.clouds[0].cloud.host-cloud-region: str
+.clouds[0].cloud.identity-endpoint: str
+.clouds[0].cloud.is-controller-cloud: bool
+.clouds[0].cloud.region-config["abc"]["abc"]: dict[Any, Any]
+.clouds[0].cloud.regions[0]: CloudRegion
+.clouds[0].cloud.regions[0].endpoint: str
+.clouds[0].cloud.regions[0].identity-endpoint: str
+.clouds[0].cloud.regions[0].name: str
+.clouds[0].cloud.regions[0].storage-endpoint: str
+.clouds[0].cloud.skip-tls-verify: bool
+.clouds[0].cloud.storage-endpoint: str
+.clouds[0].cloud.type: str
+.clouds[0].force: bool
+.clouds[0].name: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+Cloud: 7
+.UpdateCredentialsCheckModels()
+in: UpdateCredentialArgs
+.credentials[0]: TaggedCredential
+.credentials[0].credential: CloudCredential
+.credentials[0].credential.attrs["abc"]: str
+.credentials[0].credential.auth-type: str
+.credentials[0].credential.redacted[0]: str
+.credentials[0].tag: str
+.force: bool
+out: UpdateCredentialResults
+.results[0]: UpdateCredentialResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].models[0]: UpdateCredentialModelResult
+.results[0].models[0].errors[0]: ErrorResult
+.results[0].models[0].errors[0].error: Error
+.results[0].models[0].errors[0].error.code: str
+.results[0].models[0].errors[0].error.info["abc"]: dict[Any, Any]
+.results[0].models[0].errors[0].error.message: str
+.results[0].models[0].name: str
+.results[0].models[0].uuid: str
+.results[0].tag: str
+
+Cloud: 7
+.UserCredentials()
+in: UserClouds
+.user-clouds[0]: UserCloud
+.user-clouds[0].cloud-tag: str
+.user-clouds[0].user-tag: str
+out: StringsResults
+.results[0]: StringsResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result[0]: str
+
+Controller: 11
+.AllModels()
+in: None
+out: UserModelList
+.user-models[0]: UserModel
+.user-models[0].last-connection: str
+.user-models[0].model: Model
+.user-models[0].model.name: str
+.user-models[0].model.owner-tag: str
+.user-models[0].model.type: str
+.user-models[0].model.uuid: str
+
+Controller: 11
+.CloudSpec()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: CloudSpecResults
+.results[0]: CloudSpecResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: CloudSpec
+.results[0].result.cacertificates[0]: str
+.results[0].result.credential: CloudCredential
+.results[0].result.credential.attrs["abc"]: str
+.results[0].result.credential.auth-type: str
+.results[0].result.credential.redacted[0]: str
+.results[0].result.endpoint: str
+.results[0].result.identity-endpoint: str
+.results[0].result.is-controller-cloud: bool
+.results[0].result.name: str
+.results[0].result.region: str
+.results[0].result.skip-tls-verify: bool
+.results[0].result.storage-endpoint: str
+.results[0].result.type: str
+
+Controller: 11
+.ConfigSet()
+in: ControllerConfigSet
+.config["abc"]: dict[Any, Any]
+out: None
+
+Controller: 11
+.ControllerAPIInfoForModels()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: ControllerAPIInfoResults
+.results[0]: ControllerAPIInfoResult
+.results[0].addresses[0]: str
+.results[0].cacert: str
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+Controller: 11
+.ControllerConfig()
+in: None
+out: ControllerConfigResult
+.config["abc"]: dict[Any, Any]
+
+Controller: 11
+.ControllerVersion()
+in: None
+out: ControllerVersionResults
+.git-commit: str
+.version: str
+
+Controller: 11
+.DashboardConnectionInfo()
+in: None
+out: DashboardConnectionInfo
+.error: Error
+.error.code: str
+.error.info["abc"]: dict[Any, Any]
+.error.message: str
+.proxy-connection: Proxy
+.proxy-connection.config["abc"]: dict[Any, Any]
+.proxy-connection.type: str
+.ssh-connection: DashboardConnectionSSHTunnel
+.ssh-connection.entity: str
+.ssh-connection.host: str
+.ssh-connection.model: str
+.ssh-connection.port: str
+
+Controller: 11
+.DestroyController()
+in: DestroyControllerArgs
+.destroy-models: bool
+.destroy-storage: bool
+.force: bool
+.max-wait: int
+.model-timeout: int
+out: None
+
+Controller: 11
+.GetCloudSpec()
+in: ModelTag
+: dict[Any, Any]
+out: CloudSpecResult
+.error: Error
+.error.code: str
+.error.info["abc"]: dict[Any, Any]
+.error.message: str
+.result: CloudSpec
+.result.cacertificates[0]: str
+.result.credential: CloudCredential
+.result.credential.attrs["abc"]: str
+.result.credential.auth-type: str
+.result.credential.redacted[0]: str
+.result.endpoint: str
+.result.identity-endpoint: str
+.result.is-controller-cloud: bool
+.result.name: str
+.result.region: str
+.result.skip-tls-verify: bool
+.result.storage-endpoint: str
+.result.type: str
+
+Controller: 11
+.GetControllerAccess()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: UserAccessResults
+.results[0]: UserAccessResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: UserAccess
+.results[0].result.access: str
+.results[0].result.user-tag: str
+
+Controller: 11
+.HostedModelConfigs()
+in: None
+out: HostedModelConfigsResults
+.models[0]: HostedModelConfig
+.models[0].cloud-spec: CloudSpec
+.models[0].cloud-spec.cacertificates[0]: str
+.models[0].cloud-spec.credential: CloudCredential
+.models[0].cloud-spec.credential.attrs["abc"]: str
+.models[0].cloud-spec.credential.auth-type: str
+.models[0].cloud-spec.credential.redacted[0]: str
+.models[0].cloud-spec.endpoint: str
+.models[0].cloud-spec.identity-endpoint: str
+.models[0].cloud-spec.is-controller-cloud: bool
+.models[0].cloud-spec.name: str
+.models[0].cloud-spec.region: str
+.models[0].cloud-spec.skip-tls-verify: bool
+.models[0].cloud-spec.storage-endpoint: str
+.models[0].cloud-spec.type: str
+.models[0].config["abc"]: dict[Any, Any]
+.models[0].error: Error
+.models[0].error.code: str
+.models[0].error.info["abc"]: dict[Any, Any]
+.models[0].error.message: str
+.models[0].name: str
+.models[0].owner: str
+
+Controller: 11
+.IdentityProviderURL()
+in: None
+out: StringResult
+.error: Error
+.error.code: str
+.error.info["abc"]: dict[Any, Any]
+.error.message: str
+.result: str
+
+Controller: 11
+.InitiateMigration()
+in: InitiateMigrationArgs
+.specs[0]: MigrationSpec
+.specs[0].model-tag: str
+.specs[0].target-info: MigrationTargetInfo
+.specs[0].target-info.addrs[0]: str
+.specs[0].target-info.auth-tag: str
+.specs[0].target-info.ca-cert: str
+.specs[0].target-info.controller-alias: str
+.specs[0].target-info.controller-tag: str
+.specs[0].target-info.macaroons: str
+.specs[0].target-info.password: str
+out: InitiateMigrationResults
+.results[0]: InitiateMigrationResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].migration-id: str
+.results[0].model-tag: str
+
+Controller: 11
+.ListBlockedModels()
+in: None
+out: ModelBlockInfoList
+.models[0]: ModelBlockInfo
+.models[0].blocks[0]: str
+.models[0].model-uuid: str
+.models[0].name: str
+.models[0].owner-tag: str
+
+Controller: 11
+.ModelConfig()
+in: None
+out: ModelConfigResults
+.config["abc"]: ConfigValue
+.config["abc"].source: str
+.config["abc"].value: dict[Any, Any]
+
+Controller: 11
+.ModelStatus()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: ModelStatusResults
+.models[0]: ModelStatus
+.models[0].application-count: int
+.models[0].applications[0]: ModelApplicationInfo
+.models[0].applications[0].name: str
+.models[0].error: Error
+.models[0].error.code: str
+.models[0].error.info["abc"]: dict[Any, Any]
+.models[0].error.message: str
+.models[0].filesystems[0]: ModelFilesystemInfo
+.models[0].filesystems[0].detachable: bool
+.models[0].filesystems[0].id: str
+.models[0].filesystems[0].message: str
+.models[0].filesystems[0].provider-id: str
+.models[0].filesystems[0].status: str
+.models[0].hosted-machine-count: int
+.models[0].life: str
+.models[0].machines[0]: ModelMachineInfo
+.models[0].machines[0].display-name: str
+.models[0].machines[0].ha-primary: bool
+.models[0].machines[0].hardware: MachineHardware
+.models[0].machines[0].hardware.arch: str
+.models[0].machines[0].hardware.availability-zone: str
+.models[0].machines[0].hardware.cores: int
+.models[0].machines[0].hardware.cpu-power: int
+.models[0].machines[0].hardware.mem: int
+.models[0].machines[0].hardware.root-disk: int
+.models[0].machines[0].hardware.tags[0]: str
+.models[0].machines[0].hardware.virt-type: str
+.models[0].machines[0].has-vote: bool
+.models[0].machines[0].id: str
+.models[0].machines[0].instance-id: str
+.models[0].machines[0].message: str
+.models[0].machines[0].status: str
+.models[0].machines[0].wants-vote: bool
+.models[0].model-tag: str
+.models[0].owner-tag: str
+.models[0].type: str
+.models[0].unit-count: int
+.models[0].volumes[0]: ModelVolumeInfo
+.models[0].volumes[0].detachable: bool
+.models[0].volumes[0].id: str
+.models[0].volumes[0].message: str
+.models[0].volumes[0].provider-id: str
+.models[0].volumes[0].status: str
+
+Controller: 11
+.ModifyControllerAccess()
+in: ModifyControllerAccessRequest
+.changes[0]: ModifyControllerAccess
+.changes[0].access: str
+.changes[0].action: str
+.changes[0].user-tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+Controller: 11
+.MongoVersion()
+in: None
+out: StringResult
+.error: Error
+.error.code: str
+.error.info["abc"]: dict[Any, Any]
+.error.message: str
+.result: str
+
+Controller: 11
+.RemoveBlocks()
+in: RemoveBlocksArgs
+.all: bool
+out: None
+
+Controller: 11
+.WatchAllModelSummaries()
+in: None
+out: SummaryWatcherID
+.watcher-id: str
+
+Controller: 11
+.WatchAllModels()
+in: None
+out: AllWatcherId
+.watcher-id: str
+
+Controller: 11
+.WatchCloudSpecsChanges()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: NotifyWatchResults
+.results[0]: NotifyWatchResult
+.results[0].NotifyWatcherId: str
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+Controller: 11
+.WatchModelSummaries()
+in: None
+out: SummaryWatcherID
+.watcher-id: str
+
+CrossController: 1
+.ControllerInfo()
+in: None
+out: ControllerAPIInfoResults
+.results[0]: ControllerAPIInfoResult
+.results[0].addresses[0]: str
+.results[0].cacert: str
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+CrossController: 1
+.WatchControllerInfo()
+in: None
+out: NotifyWatchResults
+.results[0]: NotifyWatchResult
+.results[0].NotifyWatcherId: str
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+HighAvailability: 2
+.EnableHA()
+in: ControllersSpecs
+.specs[0]: ControllersSpec
+.specs[0].constraints: Value
+.specs[0].constraints.allocate-public-ip: bool
+.specs[0].constraints.arch: str
+.specs[0].constraints.container: str
+.specs[0].constraints.cores: int
+.specs[0].constraints.cpu-power: int
+.specs[0].constraints.instance-role: str
+.specs[0].constraints.instance-type: str
+.specs[0].constraints.mem: int
+.specs[0].constraints.root-disk: int
+.specs[0].constraints.root-disk-source: str
+.specs[0].constraints.spaces[0]: str
+.specs[0].constraints.tags[0]: str
+.specs[0].constraints.virt-type: str
+.specs[0].constraints.zones[0]: str
+.specs[0].num-controllers: int
+.specs[0].placement[0]: str
+out: ControllersChangeResults
+.results[0]: ControllersChangeResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: ControllersChanges
+.results[0].result.added[0]: str
+.results[0].result.converted[0]: str
+.results[0].result.maintained[0]: str
+.results[0].result.removed[0]: str
+
+MigrationTarget: 1
+.Abort()
+in: ModelArgs
+.model-tag: str
+out: None
+
+MigrationTarget: 1
+.Activate()
+in: ModelArgs
+.model-tag: str
+out: None
+
+MigrationTarget: 1
+.AdoptResources()
+in: AdoptResourcesArgs
+.model-tag: str
+.source-controller-version: Number
+.source-controller-version.Build: int
+.source-controller-version.Major: int
+.source-controller-version.Minor: int
+.source-controller-version.Patch: int
+.source-controller-version.Tag: str
+out: None
+
+MigrationTarget: 1
+.CACert()
+in: None
+out: BytesResult
+.result[0]: int
+
+MigrationTarget: 1
+.CheckMachines()
+in: ModelArgs
+.model-tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+MigrationTarget: 1
+.Import()
+in: SerializedModel
+.bytes[0]: int
+.charms[0]: str
+.resources[0]: SerializedModelResource
+.resources[0].application: str
+.resources[0].application-revision: SerializedModelResourceRevision
+.resources[0].application-revision.description: str
+.resources[0].application-revision.fingerprint: str
+.resources[0].application-revision.origin: str
+.resources[0].application-revision.path: str
+.resources[0].application-revision.revision: int
+.resources[0].application-revision.size: int
+.resources[0].application-revision.timestamp: str
+.resources[0].application-revision.type: str
+.resources[0].application-revision.username: str
+.resources[0].charmstore-revision: SerializedModelResourceRevision
+.resources[0].charmstore-revision.description: str
+.resources[0].charmstore-revision.fingerprint: str
+.resources[0].charmstore-revision.origin: str
+.resources[0].charmstore-revision.path: str
+.resources[0].charmstore-revision.revision: int
+.resources[0].charmstore-revision.size: int
+.resources[0].charmstore-revision.timestamp: str
+.resources[0].charmstore-revision.type: str
+.resources[0].charmstore-revision.username: str
+.resources[0].name: str
+.resources[0].unit-revisions["abc"]: SerializedModelResourceRevision
+.resources[0].unit-revisions["abc"].description: str
+.resources[0].unit-revisions["abc"].fingerprint: str
+.resources[0].unit-revisions["abc"].origin: str
+.resources[0].unit-revisions["abc"].path: str
+.resources[0].unit-revisions["abc"].revision: int
+.resources[0].unit-revisions["abc"].size: int
+.resources[0].unit-revisions["abc"].timestamp: str
+.resources[0].unit-revisions["abc"].type: str
+.resources[0].unit-revisions["abc"].username: str
+.tools[0]: SerializedModelTools
+.tools[0].uri: str
+.tools[0].version: str
+out: None
+
+MigrationTarget: 1
+.LatestLogTime()
+in: ModelArgs
+.model-tag: str
+out: str
+
+MigrationTarget: 1
+.Prechecks()
+in: MigrationModelInfo
+.agent-version: Number
+.agent-version.Build: int
+.agent-version.Major: int
+.agent-version.Minor: int
+.agent-version.Patch: int
+.agent-version.Tag: str
+.controller-agent-version: Number
+.controller-agent-version.Build: int
+.controller-agent-version.Major: int
+.controller-agent-version.Minor: int
+.controller-agent-version.Patch: int
+.controller-agent-version.Tag: str
+.name: str
+.owner-tag: str
+.uuid: str
+out: None
+
+ModelConfig: 3
+.GetModelConstraints()
+in: None
+out: GetConstraintsResults
+.constraints: Value
+.constraints.allocate-public-ip: bool
+.constraints.arch: str
+.constraints.container: str
+.constraints.cores: int
+.constraints.cpu-power: int
+.constraints.instance-role: str
+.constraints.instance-type: str
+.constraints.mem: int
+.constraints.root-disk: int
+.constraints.root-disk-source: str
+.constraints.spaces[0]: str
+.constraints.tags[0]: str
+.constraints.virt-type: str
+.constraints.zones[0]: str
+
+ModelConfig: 3
+.ModelGet()
+in: None
+out: ModelConfigResults
+.config["abc"]: ConfigValue
+.config["abc"].source: str
+.config["abc"].value: dict[Any, Any]
+
+ModelConfig: 3
+.ModelSet()
+in: ModelSet
+.config["abc"]: dict[Any, Any]
+out: None
+
+ModelConfig: 3
+.ModelUnset()
+in: ModelUnset
+.keys[0]: str
+out: None
+
+ModelConfig: 3
+.SLALevel()
+in: None
+out: StringResult
+.error: Error
+.error.code: str
+.error.info["abc"]: dict[Any, Any]
+.error.message: str
+.result: str
+
+ModelConfig: 3
+.Sequences()
+in: None
+out: ModelSequencesResult
+.sequences["abc"]: int
+
+ModelConfig: 3
+.SetModelConstraints()
+in: SetConstraints
+.application: str
+.constraints: Value
+.constraints.allocate-public-ip: bool
+.constraints.arch: str
+.constraints.container: str
+.constraints.cores: int
+.constraints.cpu-power: int
+.constraints.instance-role: str
+.constraints.instance-type: str
+.constraints.mem: int
+.constraints.root-disk: int
+.constraints.root-disk-source: str
+.constraints.spaces[0]: str
+.constraints.tags[0]: str
+.constraints.virt-type: str
+.constraints.zones[0]: str
+out: None
+
+ModelConfig: 3
+.SetSLALevel()
+in: ModelSLA
+.ModelSLAInfo: ModelSLAInfo
+.ModelSLAInfo.level: str
+.ModelSLAInfo.owner: str
+.creds[0]: int
+.level: str
+.owner: str
+out: None
+
+ModelManager: 9
+.ChangeModelCredential()
+in: ChangeModelCredentialsParams
+.model-credentials[0]: ChangeModelCredentialParams
+.model-credentials[0].credential-tag: str
+.model-credentials[0].model-tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+ModelManager: 9
+.CreateModel()
+in: ModelCreateArgs
+.cloud-tag: str
+.config["abc"]: dict[Any, Any]
+.credential: str
+.name: str
+.owner-tag: str
+.region: str
+out: ModelInfo
+.agent-version: Number
+.agent-version.Build: int
+.agent-version.Major: int
+.agent-version.Minor: int
+.agent-version.Patch: int
+.agent-version.Tag: str
+.cloud-credential-tag: str
+.cloud-credential-validity: bool
+.cloud-region: str
+.cloud-tag: str
+.controller-uuid: str
+.default-base: str
+.default-series: str
+.is-controller: bool
+.life: str
+.machines[0]: ModelMachineInfo
+.machines[0].display-name: str
+.machines[0].ha-primary: bool
+.machines[0].hardware: MachineHardware
+.machines[0].hardware.arch: str
+.machines[0].hardware.availability-zone: str
+.machines[0].hardware.cores: int
+.machines[0].hardware.cpu-power: int
+.machines[0].hardware.mem: int
+.machines[0].hardware.root-disk: int
+.machines[0].hardware.tags[0]: str
+.machines[0].hardware.virt-type: str
+.machines[0].has-vote: bool
+.machines[0].id: str
+.machines[0].instance-id: str
+.machines[0].message: str
+.machines[0].status: str
+.machines[0].wants-vote: bool
+.migration: ModelMigrationStatus
+.migration.end: str
+.migration.start: str
+.migration.status: str
+.name: str
+.owner-tag: str
+.provider-type: str
+.secret-backends[0]: SecretBackendResult
+.secret-backends[0].error: Error
+.secret-backends[0].error.code: str
+.secret-backends[0].error.info["abc"]: dict[Any, Any]
+.secret-backends[0].error.message: str
+.secret-backends[0].id: str
+.secret-backends[0].message: str
+.secret-backends[0].num-secrets: int
+.secret-backends[0].result: SecretBackend
+.secret-backends[0].result.backend-type: str
+.secret-backends[0].result.config["abc"]: dict[Any, Any]
+.secret-backends[0].result.name: str
+.secret-backends[0].result.token-rotate-interval: int
+.secret-backends[0].status: str
+.sla: ModelSLAInfo
+.sla.level: str
+.sla.owner: str
+.status: EntityStatus
+.status.data["abc"]: dict[Any, Any]
+.status.info: str
+.status.since: str
+.status.status: str
+.supported-features[0]: SupportedFeature
+.supported-features[0].description: str
+.supported-features[0].name: str
+.supported-features[0].version: str
+.type: str
+.users[0]: ModelUserInfo
+.users[0].access: str
+.users[0].display-name: str
+.users[0].last-connection: str
+.users[0].model-tag: str
+.users[0].user: str
+.uuid: str
+
+ModelManager: 9
+.DestroyModels()
+in: DestroyModelsParams
+.models[0]: DestroyModelParams
+.models[0].destroy-storage: bool
+.models[0].force: bool
+.models[0].max-wait: int
+.models[0].model-tag: str
+.models[0].timeout: int
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+ModelManager: 9
+.DumpModels()
+in: DumpModelRequest
+.entities[0]: Entity
+.entities[0].tag: str
+.simplified: bool
+out: StringResults
+.results[0]: StringResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: str
+
+ModelManager: 9
+.DumpModelsDB()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: MapResults
+.results[0]: MapResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result["abc"]: dict[Any, Any]
+
+ModelManager: 9
+.ListModelSummaries()
+in: ModelSummariesRequest
+.all: bool
+.user-tag: str
+out: ModelSummaryResults
+.results[0]: ModelSummaryResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: ModelSummary
+.results[0].result.agent-version: Number
+.results[0].result.agent-version.Build: int
+.results[0].result.agent-version.Major: int
+.results[0].result.agent-version.Minor: int
+.results[0].result.agent-version.Patch: int
+.results[0].result.agent-version.Tag: str
+.results[0].result.cloud-credential-tag: str
+.results[0].result.cloud-region: str
+.results[0].result.cloud-tag: str
+.results[0].result.controller-uuid: str
+.results[0].result.counts[0]: ModelEntityCount
+.results[0].result.counts[0].count: int
+.results[0].result.counts[0].entity: str
+.results[0].result.default-series: str
+.results[0].result.is-controller: bool
+.results[0].result.last-connection: str
+.results[0].result.life: str
+.results[0].result.migration: ModelMigrationStatus
+.results[0].result.migration.end: str
+.results[0].result.migration.start: str
+.results[0].result.migration.status: str
+.results[0].result.name: str
+.results[0].result.owner-tag: str
+.results[0].result.provider-type: str
+.results[0].result.sla: ModelSLAInfo
+.results[0].result.sla.level: str
+.results[0].result.sla.owner: str
+.results[0].result.status: EntityStatus
+.results[0].result.status.data["abc"]: dict[Any, Any]
+.results[0].result.status.info: str
+.results[0].result.status.since: str
+.results[0].result.status.status: str
+.results[0].result.type: str
+.results[0].result.user-access: str
+.results[0].result.uuid: str
+
+ModelManager: 9
+.ListModels()
+in: Entity
+.tag: str
+out: UserModelList
+.user-models[0]: UserModel
+.user-models[0].last-connection: str
+.user-models[0].model: Model
+.user-models[0].model.name: str
+.user-models[0].model.owner-tag: str
+.user-models[0].model.type: str
+.user-models[0].model.uuid: str
+
+ModelManager: 9
+.ModelDefaultsForClouds()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: ModelDefaultsResults
+.results[0]: ModelDefaultsResult
+.results[0].config["abc"]: ModelDefaults
+.results[0].config["abc"].controller: dict[Any, Any]
+.results[0].config["abc"].default: dict[Any, Any]
+.results[0].config["abc"].regions[0]: RegionDefaults
+.results[0].config["abc"].regions[0].region-name: str
+.results[0].config["abc"].regions[0].value: dict[Any, Any]
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+ModelManager: 9
+.ModelInfo()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: ModelInfoResults
+.results[0]: ModelInfoResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: ModelInfo
+.results[0].result.agent-version: Number
+.results[0].result.agent-version.Build: int
+.results[0].result.agent-version.Major: int
+.results[0].result.agent-version.Minor: int
+.results[0].result.agent-version.Patch: int
+.results[0].result.agent-version.Tag: str
+.results[0].result.cloud-credential-tag: str
+.results[0].result.cloud-credential-validity: bool
+.results[0].result.cloud-region: str
+.results[0].result.cloud-tag: str
+.results[0].result.controller-uuid: str
+.results[0].result.default-base: str
+.results[0].result.default-series: str
+.results[0].result.is-controller: bool
+.results[0].result.life: str
+.results[0].result.machines[0]: ModelMachineInfo
+.results[0].result.machines[0].display-name: str
+.results[0].result.machines[0].ha-primary: bool
+.results[0].result.machines[0].hardware: MachineHardware
+.results[0].result.machines[0].hardware.arch: str
+.results[0].result.machines[0].hardware.availability-zone: str
+.results[0].result.machines[0].hardware.cores: int
+.results[0].result.machines[0].hardware.cpu-power: int
+.results[0].result.machines[0].hardware.mem: int
+.results[0].result.machines[0].hardware.root-disk: int
+.results[0].result.machines[0].hardware.tags[0]: str
+.results[0].result.machines[0].hardware.virt-type: str
+.results[0].result.machines[0].has-vote: bool
+.results[0].result.machines[0].id: str
+.results[0].result.machines[0].instance-id: str
+.results[0].result.machines[0].message: str
+.results[0].result.machines[0].status: str
+.results[0].result.machines[0].wants-vote: bool
+.results[0].result.migration: ModelMigrationStatus
+.results[0].result.migration.end: str
+.results[0].result.migration.start: str
+.results[0].result.migration.status: str
+.results[0].result.name: str
+.results[0].result.owner-tag: str
+.results[0].result.provider-type: str
+.results[0].result.secret-backends[0]: SecretBackendResult
+.results[0].result.secret-backends[0].error: Error
+.results[0].result.secret-backends[0].error.code: str
+.results[0].result.secret-backends[0].error.info["abc"]: dict[Any, Any]
+.results[0].result.secret-backends[0].error.message: str
+.results[0].result.secret-backends[0].id: str
+.results[0].result.secret-backends[0].message: str
+.results[0].result.secret-backends[0].num-secrets: int
+.results[0].result.secret-backends[0].result: SecretBackend
+.results[0].result.secret-backends[0].result.backend-type: str
+.results[0].result.secret-backends[0].result.config["abc"]: dict[Any, Any]
+.results[0].result.secret-backends[0].result.name: str
+.results[0].result.secret-backends[0].result.token-rotate-interval: int
+.results[0].result.secret-backends[0].status: str
+.results[0].result.sla: ModelSLAInfo
+.results[0].result.sla.level: str
+.results[0].result.sla.owner: str
+.results[0].result.status: EntityStatus
+.results[0].result.status.data["abc"]: dict[Any, Any]
+.results[0].result.status.info: str
+.results[0].result.status.since: str
+.results[0].result.status.status: str
+.results[0].result.supported-features[0]: SupportedFeature
+.results[0].result.supported-features[0].description: str
+.results[0].result.supported-features[0].name: str
+.results[0].result.supported-features[0].version: str
+.results[0].result.type: str
+.results[0].result.users[0]: ModelUserInfo
+.results[0].result.users[0].access: str
+.results[0].result.users[0].display-name: str
+.results[0].result.users[0].last-connection: str
+.results[0].result.users[0].model-tag: str
+.results[0].result.users[0].user: str
+.results[0].result.uuid: str
+
+ModelManager: 9
+.ModelStatus()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: ModelStatusResults
+.models[0]: ModelStatus
+.models[0].application-count: int
+.models[0].applications[0]: ModelApplicationInfo
+.models[0].applications[0].name: str
+.models[0].error: Error
+.models[0].error.code: str
+.models[0].error.info["abc"]: dict[Any, Any]
+.models[0].error.message: str
+.models[0].filesystems[0]: ModelFilesystemInfo
+.models[0].filesystems[0].detachable: bool
+.models[0].filesystems[0].id: str
+.models[0].filesystems[0].message: str
+.models[0].filesystems[0].provider-id: str
+.models[0].filesystems[0].status: str
+.models[0].hosted-machine-count: int
+.models[0].life: str
+.models[0].machines[0]: ModelMachineInfo
+.models[0].machines[0].display-name: str
+.models[0].machines[0].ha-primary: bool
+.models[0].machines[0].hardware: MachineHardware
+.models[0].machines[0].hardware.arch: str
+.models[0].machines[0].hardware.availability-zone: str
+.models[0].machines[0].hardware.cores: int
+.models[0].machines[0].hardware.cpu-power: int
+.models[0].machines[0].hardware.mem: int
+.models[0].machines[0].hardware.root-disk: int
+.models[0].machines[0].hardware.tags[0]: str
+.models[0].machines[0].hardware.virt-type: str
+.models[0].machines[0].has-vote: bool
+.models[0].machines[0].id: str
+.models[0].machines[0].instance-id: str
+.models[0].machines[0].message: str
+.models[0].machines[0].status: str
+.models[0].machines[0].wants-vote: bool
+.models[0].model-tag: str
+.models[0].owner-tag: str
+.models[0].type: str
+.models[0].unit-count: int
+.models[0].volumes[0]: ModelVolumeInfo
+.models[0].volumes[0].detachable: bool
+.models[0].volumes[0].id: str
+.models[0].volumes[0].message: str
+.models[0].volumes[0].provider-id: str
+.models[0].volumes[0].status: str
+
+ModelManager: 9
+.ModifyModelAccess()
+in: ModifyModelAccessRequest
+.changes[0]: ModifyModelAccess
+.changes[0].access: str
+.changes[0].action: str
+.changes[0].model-tag: str
+.changes[0].user-tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+ModelManager: 9
+.SetModelDefaults()
+in: SetModelDefaults
+.config[0]: ModelDefaultValues
+.config[0].cloud-region: str
+.config[0].cloud-tag: str
+.config[0].config["abc"]: dict[Any, Any]
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+ModelManager: 9
+.UnsetModelDefaults()
+in: UnsetModelDefaults
+.keys[0]: ModelUnsetKeys
+.keys[0].cloud-region: str
+.keys[0].cloud-tag: str
+.keys[0].keys[0]: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+ModelSummaryWatcher: 1
+.Next()
+in: None
+out: SummaryWatcherNextResults
+.models[0]: ModelAbstract
+.models[0].admins[0]: str
+.models[0].annotations["abc"]: str
+.models[0].cloud: str
+.models[0].controller: str
+.models[0].credential: str
+.models[0].messages[0]: ModelSummaryMessage
+.models[0].messages[0].agent: str
+.models[0].messages[0].message: str
+.models[0].name: str
+.models[0].region: str
+.models[0].removed: bool
+.models[0].size: ModelSummarySize
+.models[0].size.applications: int
+.models[0].size.containers: int
+.models[0].size.machines: int
+.models[0].size.relations: int
+.models[0].size.units: int
+.models[0].status: str
+.models[0].uuid: str
+
+ModelSummaryWatcher: 1
+.Stop()
+in: None
+out: None
+
+ModelUpgrader: 1
+.AbortModelUpgrade()
+in: ModelParam
+.model-tag: str
+out: None
+
+ModelUpgrader: 1
+.UpgradeModel()
+in: UpgradeModelParams
+.agent-stream: str
+.dry-run: bool
+.ignore-agent-versions: bool
+.model-tag: str
+.target-version: Number
+.target-version.Build: int
+.target-version.Major: int
+.target-version.Minor: int
+.target-version.Patch: int
+.target-version.Tag: str
+out: UpgradeModelResult
+.chosen-version: Number
+.chosen-version.Build: int
+.chosen-version.Major: int
+.chosen-version.Minor: int
+.chosen-version.Patch: int
+.chosen-version.Tag: str
+.error: Error
+.error.code: str
+.error.info["abc"]: dict[Any, Any]
+.error.message: str
+
+NotifyWatcher: 1
+.Next()
+in: None
+out: None
+
+NotifyWatcher: 1
+.Stop()
+in: None
+out: None
+
+Pinger: 1
+.Ping()
+in: None
+out: None
+
+Pinger: 1
+.Stop()
+in: None
+out: None
+
+SecretBackends: 1
+.AddSecretBackends()
+in: AddSecretBackendArgs
+.args[0]: AddSecretBackendArg
+.args[0].SecretBackend: SecretBackend
+.args[0].SecretBackend.backend-type: str
+.args[0].SecretBackend.config["abc"]: dict[Any, Any]
+.args[0].SecretBackend.name: str
+.args[0].SecretBackend.token-rotate-interval: int
+.args[0].backend-type: str
+.args[0].config["abc"]: dict[Any, Any]
+.args[0].id: str
+.args[0].name: str
+.args[0].token-rotate-interval: int
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+SecretBackends: 1
+.ListSecretBackends()
+in: ListSecretBackendsArgs
+.names[0]: str
+.reveal: bool
+out: ListSecretBackendsResults
+.results[0]: SecretBackendResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].id: str
+.results[0].message: str
+.results[0].num-secrets: int
+.results[0].result: SecretBackend
+.results[0].result.backend-type: str
+.results[0].result.config["abc"]: dict[Any, Any]
+.results[0].result.name: str
+.results[0].result.token-rotate-interval: int
+.results[0].status: str
+
+SecretBackends: 1
+.RemoveSecretBackends()
+in: RemoveSecretBackendArgs
+.args[0]: RemoveSecretBackendArg
+.args[0].force: bool
+.args[0].name: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+SecretBackends: 1
+.UpdateSecretBackends()
+in: UpdateSecretBackendArgs
+.args[0]: UpdateSecretBackendArg
+.args[0].config["abc"]: dict[Any, Any]
+.args[0].force: bool
+.args[0].name: str
+.args[0].name-change: str
+.args[0].reset[0]: str
+.args[0].token-rotate-interval: int
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+UserManager: 3
+.AddUser()
+in: AddUsers
+.users[0]: AddUser
+.users[0].display-name: str
+.users[0].password: str
+.users[0].username: str
+out: AddUserResults
+.results[0]: AddUserResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].secret-key[0]: int
+.results[0].tag: str
+
+UserManager: 3
+.DisableUser()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+UserManager: 3
+.EnableUser()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+UserManager: 3
+.ModelUserInfo()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: ModelUserInfoResults
+.results[0]: ModelUserInfoResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: ModelUserInfo
+.results[0].result.access: str
+.results[0].result.display-name: str
+.results[0].result.last-connection: str
+.results[0].result.model-tag: str
+.results[0].result.user: str
+
+UserManager: 3
+.RemoveUser()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+UserManager: 3
+.ResetPassword()
+in: Entities
+.entities[0]: Entity
+.entities[0].tag: str
+out: AddUserResults
+.results[0]: AddUserResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].secret-key[0]: int
+.results[0].tag: str
+
+UserManager: 3
+.SetPassword()
+in: EntityPasswords
+.changes[0]: EntityPassword
+.changes[0].password: str
+.changes[0].tag: str
+out: ErrorResults
+.results[0]: ErrorResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+
+UserManager: 3
+.UserInfo()
+in: UserInfoRequest
+.entities[0]: Entity
+.entities[0].tag: str
+.include-disabled: bool
+out: UserInfoResults
+.results[0]: UserInfoResult
+.results[0].error: Error
+.results[0].error.code: str
+.results[0].error.info["abc"]: dict[Any, Any]
+.results[0].error.message: str
+.results[0].result: UserInfo
+.results[0].result.access: str
+.results[0].result.created-by: str
+.results[0].result.date-created: str
+.results[0].result.disabled: bool
+.results[0].result.display-name: str
+.results[0].result.last-connection: str
+.results[0].result.username: str
